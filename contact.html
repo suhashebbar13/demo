@@ -1,0 +1,199 @@
+
+ <!-- $message_sent = false
+  if(isset($_POST['email']) && $_POST['email'] != ''){
+    if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)):{
+      $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $messageSubject =$_POST['subject'];
+        $message = $_POST['message']
+
+        $to = "suhashebbar.ps@gmail.com";
+        $body ="";
+
+        $body .= "From: ".$userName. "\r\n";
+        $body .= "Email: ".$userEmail. "\r\n";
+        $body .= "Message: ".$message. "\r\n";
+
+        mail($to,$messageSubject,$body);
+
+        $message_sent = true;
+
+    } 
+  } -->
+
+
+<!-- $userName = $_POST['name'];
+        $userEmail = $_POST['email'];
+        $messageSubject =$_POST['subject'];
+        $message = $_POST['message']
+
+        $to = "suhashebbar.ps@gmail.com";
+        $body ="";
+
+        $body .= "From: ".$userName. "\r\n";
+        $body .= "Email: ".$userEmail. "\r\n";
+        $body .= "Message: ".$message. "\r\n";
+
+        mail($to,$messageSubject,$body);
+
+        $message_sent = true; -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="nav-assests/nav.css">
+    <link rel="stylesheet" href="other-assests/contact.css">
+    <title>Document</title>
+</head>
+<body> 
+    <nav>
+        <div class="logo">
+            <img src="logo.svg" alt="Logo Image">
+        </div>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Solutions</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8512105012232!2d77.55115331475794!3d12.981366818176356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df19d5ffd9b%3A0x3fb24854fe51c325!2sBytematic%20It%20Solutions!5e0!3m2!1sen!2sin!4v1632243585576!5m2!1sen!2sin" width="800" height="600" style="border:0; text-align: center; margin: 7%;" allowfullscreen="" loading="lazy"></iframe> -->
+    <script src="nav-assests/nav.js"></script> <br> <br>
+    <section id="contact" class="contact">
+        <div class="container">
+  
+          <div class="section-title">
+            <h2>Contact</h2> <hr>
+            <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+          </div>
+  
+          <div class="row" data-aos="fade-in" id="main-content">
+  
+            <div class="col-lg-5 d-flex align-items-stretch">
+              <div class="info">
+                <div class="address">
+                  <i class="icofont-google-map"></i>
+                  <h4>Location:</h4>
+                  <p>M108 Street, Kolkata, WB 723453</p>
+                </div>
+  
+                <div class="email">
+                  <i class="icofont-envelope"></i>
+                  <h4>Email:</h4>
+                  <p>info@example.com</p>
+                </div>
+  
+                <div class="phone">
+                  <i class="icofont-phone"></i>
+                  <h4>Call:</h4>
+                  <p>+91 95589 55488</p>
+                </div>
+  
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8512105012232!2d77.55115331475794!3d12.981366818176356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3df19d5ffd9b%3A0x3fb24854fe51c325!2sBytematic%20It%20Solutions!5e0!3m2!1sen!2sin!4v1632243585576!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch form-main">
+              <form action="javascript:sendmail()" method="post" role="form" class="php-email-form">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="name" style="color: black;">Your Name</label> <br> <br>
+                    <input type="text" name="name" class="form-control" id="name"  style="color: black;" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                    <div class="validate"></div>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="name"  style="color: black;">Your Email</label> <br> <br> 
+                    <input type="email" style="color: black;" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                    <div class="validate"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name"  style="color: black;">Subject</label> <br> <br>
+                  <input type="text" style="color: black; width: 100%;" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  <div class="validate"></div>
+                </div>
+                <div class="form-group">
+                  <label for="name"  style="color: black;">Message</label> <br> <br>
+                  <textarea class="form-control" style="color: black; width: 100%;" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                  <div class="validate"></div>
+                </div>
+                <div class="mb-3">
+                  <div class="loading" style="color: black;">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message" style="color: black;">Your message has been sent. Thank you!</div>
+                </div>
+                <div class="text-center"><button type="submit">Send Message</button></div>
+              </form>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+      <script
+      src="https://code.jquery.com/jquery-2.2.4.min.js"
+      integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+      crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+     
+    <script>  
+    
+         function sendmail(){
+        
+          var name = $('#name').val();
+          var email = $('#email').val();
+          var subject = $('#subject').val();
+          var message = $('#message').val();
+    
+          // var body = $('#body').val();
+    
+          var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+          //console.log(name, phone, email, message);
+    
+          Email.send({
+            SecureToken:"fbf31702-bb7f-4a4e-9c1c-4ccf17ee777f",
+            To: 'suhashebbar.ps@gmail.com',
+            From: "chandeshawD@gmail.com",
+            Subject: "New message on contact from "+name,
+            Body: Body
+          }).then(
+            message =>{
+              //console.log (message);
+              if(message=='OK'){
+              alert('Your mail has been send. Thank you for connecting.');
+              }
+              else{
+                console.error (message);
+                alert('There is error at sending message. ')
+                
+              }
+    
+            }
+          );
+    
+    
+    
+        }
+    
+    
+        </script>
+</body>
+</html>
